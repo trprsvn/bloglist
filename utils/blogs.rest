@@ -1,0 +1,45 @@
+POST http://localhost:3003/api/blogs HTTP/1.1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRycHJzdm4iLCJpZCI6IjVkODFkMTliNTFiNjE2MTk5MzVkNmU3YSIsImlhdCI6MTU2ODc5NTY5MX0.WbQftgiVX6uQjWcJVu9W6RhsYlvWaf0AOimkXXGFnBs
+
+{
+"title": "Cool article five",
+"likes": 2,
+"url": "www.coolarticles.com",
+"author": "Article writer"
+}
+###
+http://localhost:3003/api/blogs
+###
+http://localhost:3003/api/users
+###
+POST http://localhost:3003/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "zoolander",
+  "name": "Foo Bar",
+  "password": "123456"
+}
+###
+POST http://localhost:3003/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "Trprsvn",
+  "name": "Trooper",
+  "password": "123456"
+}
+###
+POST http://localhost:3003/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "Trprsvn",
+  "password": "123456"
+}
+###
+DELETE http://localhost:3003/api/blogs/5d81ec540e9e8320cbf1b9cf HTTP/1.1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRycHJzdm4iLCJpZCI6IjVkODFkMTliNTFiNjE2MTk5MzVkNmU3YSIsImlhdCI6MTU2ODc5NTY5MX0.WbQftgiVX6uQjWcJVu9W6RhsYlvWaf0AOimkXXGFnBs
+

@@ -1,5 +1,3 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-underscore-dangle */
 const mongoose = require('mongoose')
 mongoose.set('useFindAndModify', false);
 const blogSchema = mongoose.Schema({
@@ -15,6 +13,10 @@ const blogSchema = mongoose.Schema({
   likes: {
     type: Number,
     required: true,
+  },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
   },
 })
 
